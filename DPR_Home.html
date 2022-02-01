@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Design Pattern Registry | Home</title>
+    <link rel="icon" type="image/x-icon" href="umdLogo.png">
+
+</head>
+
+<body onload = "javascript:initEventListener()">
+
+    <div id="page-container">
+
+        <header id="header">
+            <a href="DPR_Home.html"><img class="logo" src="umdLogo.png" alt="UM-D Logo" /></a>
+            <div class="text"><p><b>Tiny Tools | </b>Design Pattern Registry </p></div>
+            <a href="DPR_Help.html"><img class="qmark" src="qmark.png" alt="Question Mark in Circle" /></a>
+            <div class="clear"></div>
+        </header>
+
+
+
+
+        <div id="content-wrap">
+            <!-- all other page content -->
+
+
+            <br />
+            <h2>Pattern Name</h2>
+            <h4>What is your pattern’s name? It should give readers an idea of what the pattern accomplishes. </h4>
+            <textarea id='patternName'  class = 'field' rows=2 cols=25 placeholder="Pattern Name" maxlength="1500"></textarea>
+            
+            <br />
+
+            <h2>Problem</h2>
+            <h4>What problem(s) does your pattern attempt to solve?</h4>
+            
+            <textarea id='problem' class = 'field' rows=2 cols=25 placeholder="Enter Problem" maxlength="1500"></textarea>
+
+            <br />
+
+            <h2>Motivation</h2>
+            <h4>What problem(s) did you face that led to the creation of this pattern?</h4>
+            <textarea id='motivation' class = 'field' rows=2 cols=25 placeholder="Enter Motivation" maxlength="1500"></textarea>
+            <br />
+
+            <h2>Context</h2>
+            <h4>What environment (application domain) does the problem reside in?</h4>
+            <textarea id='context' class = 'field' rows=2 cols=25 placeholder="Enter Context" maxlength="1500"></textarea>
+            <br />
+
+            <h2>Forces</h2>
+            <h4>What systems of forces affect how the problem must be solved? What limitations and constraints must be considered?</h4>
+            <div id="forces-wrap"><textarea id='forces' class = 'field' rows=2 cols=25 placeholder="Enter Forces" maxlength="1500"></textarea>
+            </div>
+            <button id="addForcesButton" onclick="javascript:createForcesButton()">Add Field</button> <br>
+            <button id="deleteForcesButton" onclick="javascript:deleteForcesButton()">Delete Field</button> <br>
+            <br />
+
+            <h2>Solution</h2>
+            <h4>Describe the solution you are proposing.</h4>
+            <textarea id='solution' class = 'field' rows=2 cols=25 placeholder="Enter Solution" maxlength="1500"></textarea>
+            <br />
+
+            <h2>Intent</h2>
+            <h4>What is your pattern and what does it do?</h4>
+            <textarea id='intent' class = 'field' rows=2 cols=25 placeholder="Enter Intent" maxlength="1500"></textarea>
+
+            <br />
+
+            <h2>Collaborations</h2>
+            <h4>How do other design patterns contribute to your solution?</h4>           
+            <div id="collaborations-wrap"><textarea id='collaborations' class = 'field' rows=2 cols=25 placeholder="Enter Collaborations" maxlength="1500"></textarea>
+            </div>
+            <button id="addCollaborationsButton" onclick="javascript:createCollaborationsButton()">Add Field</button> <br>
+            <button id="deleteCollaborationsButton" onclick="javascript:deleteCollaborationsButton()">Delete Field</button> <br>
+            <br />
+
+            <h2>Consequences</h2>
+            <h4>What trade-offs or consequences must be considered when implementing your pattern?</h4>           
+            <div id="consequences-wrap"><textarea id='consequences' class = 'field' rows=2 cols=25 placeholder="Enter Consequences" maxlength="1500"></textarea>
+            </div>
+            <button id="addConsequencesButton" onclick="javascript:createConsequencesButton()">Add Field</button> <br>
+            <button id="deleteConsequencesButton" onclick="javascript:deleteConsequencesButton()">Delete Field</button> <br>
+            <br />
+
+            <h2>Implementation</h2>
+            <h4>What special issues should be considered when implementing your pattern?</h4>
+            <div id="implementation-wrap"><textarea id='implementation' class = 'field' rows=2 cols=25 placeholder="Enter Implementation" maxlength="1500"></textarea>
+            </div>
+            <button id="addImplementationButton" onclick="javascript:createImplementationButton()">Add Field</button> <br>
+            <button id="deleteImplementationButton" onclick="javascript:deleteImplementationButton()">Delete Field</button> <br>
+            <br />
+
+            <h2>Known Uses</h2>
+            <h4>What are some examples of this pattern being used in real appliactions?</h4>           
+            <div id="known-wrap"><textarea id='known' class = 'field' rows=2 cols=25 placeholder="Enter Known Uses" maxlength="1500"></textarea>
+            </div>
+            <button id="addKnownButton" onclick="javascript:createKnownButton()">Add Field</button> <br>
+            <button id="deleteKnownButton" onclick="javascript:deleteKnownButton()">Delete Field</button> <br>
+            <br />
+
+            <h2>Related Patterns</h2>
+            <h4>Are there any other design patterns related to this one?</h4>            
+            <div id="relatedPatterns-wrap"><textarea id='relatedPatterns' class = 'field' rows=2 cols=25 placeholder="Enter Related Patterns" maxlength="1500"></textarea>
+            </div>
+            <button id="addRelatedPatternsButton" onclick="javascript:createRelatedPatternsButton()">Add Field</button> <br>
+            <button id="deleteRelatedPatternsButton" onclick="javascript:deleteRelatedPatternsButton()">Delete Field</button> <br>
+
+            <br />
+
+            <br />
+
+            <p><a href="DPR_Output.html">
+                <input type="button" value="Generate Table" onclick="javascript:addTable();"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>
+                <input type="button" value="Clear Fields" onclick="javascript:eraseText();"> </em></p>
+           
+            
+            <br />
+            <br />
+
+        </div>
+
+        <footer id="footer">
+            <p>
+                &nbsp;&nbsp;&nbsp; Design Pattern Registry &nbsp;&nbsp;&nbsp;
+                <a href="http://groups.umd.umich.edu/cis/tinytools/index.html">Tiny Tools Home</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="DPR_Help.html">Need Help?</a>
+            </p>
+        </footer>
+    </div>
+    <script src ="app.js" type = "text/JavaScript"></script>
+
+</body>
+
+</html>
+
