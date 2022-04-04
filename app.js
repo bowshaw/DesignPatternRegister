@@ -322,44 +322,6 @@ function deleteRelatedPatterns() {
 
 function eraseText() {
 
-
-    document.getElementById("context").value = "";
-    document.getElementById("problem").value = "";
-    document.getElementById("motivation").value = "";
-    document.getElementById("patternName").value = "";
-    document.getElementById("solution").value = "";
-    document.getElementById("intent").value = "";
-
-    var forcesArray = document.getElementById("forces-wrap");
-    for (var i = 0; i < forcesArray.children.length; i++) {
-        forcesArray.children[i].value = "";
-    }
-
-    var collaborationsArray = document.getElementById("collaborations-wrap");
-    for (var i = 0; i < collaborationsArray.children.length; i++) {
-        collaborationsArray.children[i].value = "";
-    }
-
-    var consequencesArray = document.getElementById("consequences-wrap");
-    for (var i = 0; i < consequencesArray.children.length; i++) {
-        consequencesArray.children[i].value = "";
-    }
-
-    var implementationArray = document.getElementById("implementation-wrap");
-    for (var i = 0; i < implementationArray.children.length; i++) {
-        implementationArray.children[i].value = "";
-    }
-
-    var knownArray = document.getElementById("known-wrap");
-    for (var i = 0; i < knownArray.children.length; i++) {
-        knownArray.children[i].value = "";
-    }
-
-    var relatedPatternsArray = document.getElementById("relatedPatterns-wrap");
-    for (var i = 0; i < relatedPatternsArray.children.length; i++) {
-        relatedPatternsArray.children[i].value = "";
-    }
-
     location.reload();
 
 }
